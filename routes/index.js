@@ -48,16 +48,7 @@ module.exports = () => {
         usuariosController.editarPerfil);
 
     //eliminar vacantes
-    router.delete('/vacantes/eliminar/:id', vacantesController.eliminarVacante);
-
-
-    // router.get('/ejemplo', (req, res) => {
-    //     console.log(req.user); // Mostrará todo el objeto req en la consola
-    
-    //     // Puedes continuar con el manejo de la solicitud aquí
-    //     res.send('Respuesta enviada');
-    // });
-    
+    router.delete('/vacantes/eliminar/:id', vacantesController.eliminarVacante);    
 
     //recibir mensajes de candidatos
     router.post('/vacantes/:url',vacantesController.subirCV, vacantesController.contactar);
@@ -68,8 +59,6 @@ module.exports = () => {
 
     //buscador de vacantes
     router.post('/buscador', vacantesController.buscarVacantes);
-
-    
 
     return router;
 }
